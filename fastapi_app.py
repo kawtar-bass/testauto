@@ -6,7 +6,7 @@ from google import genai
 from google.genai import types  # Import pour la configuration JSON
 
 # Configuration du client
-client = genai.Client(api_key="AIzaSyDS-JIAmSty5ZQVMS-fhChTqpqlsqflqGk")
+client = genai.Client(api_key="TON_CLE_API")
 
 app = FastAPI()
 
@@ -94,3 +94,4 @@ async def analyse_pdf(file: UploadFile = File(...)):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
